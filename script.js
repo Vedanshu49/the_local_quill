@@ -1,15 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
     const books = [
-        { id: 1, title: 'The Great Gatsby', author: 'F. Scott Fitzgerald', price: 10.00, imageURL: 'images/1.jpg' },
-        { id: 2, title: 'To Kill a Mockingbird', author: 'Harper Lee', price: 12.50, imageURL: 'images/2.jpg' },
-        { id: 3, title: '1984', author: 'George Orwell', price: 9.00, imageURL: 'images/3.jpg' },
-        { id: 4, title: 'The Catcher in the Rye', author: 'J.D. Salinger', price: 8.50, imageURL: 'images/4.jpg' },
-        { id: 5, title: 'The Lord of the Rings', author: 'J.R.R. Tolkien', price: 25.00, imageURL: 'images/5.jpg' },
-        { id: 6, title: 'Pride and Prejudice', author: 'Jane Austen', price: 7.00, imageURL: 'images/6.jpg' },
-        { id: 7, title: 'The Hobbit', author: 'J.R.R. Tolkien', price: 15.00, imageURL: 'images/7.jpg' },
-        { id: 8, title: 'Moby Dick', author: 'Herman Melville', price: 13.00, imageURL: 'images/8.jpg' },
-        { id: 9, title: 'War and Peace', author: 'Leo Tolstoy', price: 18.00, imageURL: 'images/9.jpg' },
-        { id: 10, title: 'The Odyssey', author: 'Homer', price: 11.00, imageURL: 'images/10.jpg' }
+        { id: 1, title: 'The Great Gatsby', author: 'F. Scott Fitzgerald', price: 150.00, imageURL: 'images/1.jpg' },
+        { id: 2, title: 'To Kill a Mockingbird', author: 'Harper Lee', price: 350.00, imageURL: 'images/2.jpg' },
+        { id: 3, title: '1984', author: 'George Orwell', price: 130.00, imageURL: 'images/3.jpg' },
+        { id: 4, title: 'The Catcher in the Rye', author: 'J.D. Salinger', price: 165.00, imageURL: 'images/4.jpg' },
+        { id: 5, title: 'The Lord of the Rings', author: 'J.R.R. Tolkien', price: 875.00, imageURL: 'images/5.jpg' },
+        { id: 6, title: 'Pride and Prejudice', author: 'Jane Austen', price: 250.00, imageURL: 'images/6.jpg' },
+        { id: 7, title: 'The Hobbit', author: 'J.R.R. Tolkien', price: 475.00, imageURL: 'images/7.jpg' },
+        { id: 8, title: 'Moby Dick', author: 'Herman Melville', price: 199.00, imageURL: 'images/8.jpg' },
+        { id: 9, title: 'War and Peace', author: 'Leo Tolstoy', price: 320.00, imageURL: 'images/9.jpg' },
+        { id: 10, title: 'The Odyssey', author: 'Homer', price: 199.00, imageURL: 'images/10.jpg' }
     ];
 
     // Page element selectors
