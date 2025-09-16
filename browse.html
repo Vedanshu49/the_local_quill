@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Books - The Local Quill</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">The Local Quill</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="browse.html">Browse Books</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <input type="search" placeholder="Search books...">
+                <a href="cart.html" class="cart-icon">
+                    <img src="https://placehold.co/30x30" alt="Cart">
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="browse-section" style="padding-top: 40px; padding-bottom: 40px;">
+            <h2 style="margin-bottom: 30px; font-size: 28px; text-align: center;">All Our Books</h2>
+            <div id="browse-books-grid" class="book-grid">
+                <!-- All books will be dynamically inserted here by script.js -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="browse.html">Browse Books</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p>123 Bookworm Lane<br>Reader's City, BK 12345</p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="https://placehold.co/30x30" alt="Facebook"></a>
+                    <a href="#"><img src="https://placehold.co/30x30" alt="Twitter"></a>
+                    <a href="#"><img src="https://placehold.co/30x30" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
