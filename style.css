@@ -66,6 +66,11 @@ nav a {
     position: relative;
 }
 
+.cart-icon img {
+    width: 28px;
+    height: 28px;
+}
+
 .cart-count {
     position: absolute;
     top: -5px;
@@ -189,6 +194,11 @@ footer .container {
 
 .social-icons a {
     margin-right: 10px;
+}
+
+.social-icons img {
+    width: 28px;
+    height: 28px;
 }
 
 /* Book Details Page */
