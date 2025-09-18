@@ -21,8 +21,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const subtotalEl = document.getElementById('subtotal');
     const grandTotalEl = document.getElementById('grand-total');
     const bookDetailsContainer = document.getElementById('book-details');
+    const searchBars = document.querySelectorAll('input[type="search"], input[type="text"]');
+
 
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // --- SEARCH FUNCTIONALITY ---
+    function searchBooks(e) {
+        if (e.key === 'Enter' || e.type === 'click') {
+            const searchTerm = document.querySelector('.header-actions input[type="text"], .header-actions input[type="search"]').value.toLowerCase();
+            if (searchTerm) {
+                window.location.href = `browse.html?search=${encodeURIComponent(searchTerm)}`;
+            }
+        }
+    }
 
     // --- NOTIFICATION ---
     function showNotification(bookTitle) {
@@ -145,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (book) {
             bookDetailsContainer.innerHTML = `
                 <div class="book-details-image">
-                    <img src="${book.imageURL}" alt="${book.title}">
+                    <img src="images/${book.imageURL}" alt="${book.title}">
                 </div>
                 <div class="book-details-info">
                     <h1>${book.title}</h1>
@@ -176,6 +188,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- PAGE INITIALIZATION ---
     function init() {
+        if(searchBars.length > 0){
+            searchBars.forEach(searchBar => {
+                searchBar.addEventListener('keyup', searchBooks);
+                const searchIcon = searchBar.nextElementSibling;
+                if (searchIcon && searchIcon.classList.contains('search-icon')) {
+                    searchIcon.addEventListener('click', searchBooks);
+                }
+            });
+        }
+
         // Homepage
         if (newArrivalsGrid) {
             books.slice(0, 4).forEach(book => newArrivalsGrid.appendChild(createBookCard(book)));
@@ -185,7 +207,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         // Browse Page
         if (browseBooksGrid) {
-            books.forEach(book => browseBooksGrid.appendChild(createBookCard(book)));
+            const urlParams = new URLSearchParams(window.location.search);
+            const searchTerm = urlParams.get('search');
+            if (searchTerm) {
+                const filteredBooks = books.filter(book => book.title.toLowerCase().includes(searchTerm.toLowerCase()));
+                filteredBooks.forEach(book => browseBooksGrid.appendChild(createBookCard(book)));
+            } else {
+                books.forEach(book => browseBooksGrid.appendChild(createBookCard(book)));
+            }
         }
         // Cart Page
         if (cartItemsContainer) {

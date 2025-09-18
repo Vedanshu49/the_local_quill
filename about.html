@@ -3,42 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Browse Books - The Local Quill</title>
+    <title>About Us - The Local Quill</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        #browse-books-grid .book-card {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        #browse-books-grid .book-card img {
-            width: 250px;
-            height: 350px;
-            object-fit: cover;
-            margin-bottom: 15px;
-        }
-
-        #browse-books-grid .book-card h3 {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-
-        #browse-books-grid .book-card p {
-            margin-bottom: 15px;
-        }
-
-        #browse-books-grid .book-card button {
-            background-color: #0A4D68;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -52,7 +18,7 @@
                 </ul>
             </nav>
             <div class="header-actions">
-                <input type="search" placeholder="Search books...">
+                <input type="search" id="search-bar" placeholder="Search books...">
                 <img src="https://img.icons8.com/ios-glyphs/30/000000/search--v1.png" alt="Search" class="search-icon">
                 <a href="cart.html" class="cart-icon">
                     <img src="https://cdn.iconscout.com/icon/free/png-256/free-shopping-cart-1433322-1211852.png" alt="Cart">
@@ -62,11 +28,13 @@
         </div>
     </header>
 
-    <main class="container">
-        <section id="browse-section" style="padding-top: 40px; padding-bottom: 40px;">
-            <h2 style="margin-bottom: 30px; font-size: 28px; text-align: center;">All Our Books</h2>
-            <div id="browse-books-grid" class="book-grid">
-                <!-- All books will be dynamically inserted here by script.js -->
+    <main class="container" style="padding-top: 40px; padding-bottom: 40px;">
+        <section id="about-us-section">
+            <h2 style="text-align: center; margin-bottom: 30px;">About The Local Quill</h2>
+            <div style="max-width: 800px; margin: 0 auto; text-align: justify;">
+                <p>Welcome to The Local Quill, your cozy corner for literary adventures! We believe in the power of stories to connect people and transport them to new worlds. Our passion for books is what drives us to curate a diverse collection, from timeless classics to the latest bestsellers.</p>
+                <p>Founded in 2023, The Local Quill started as a small, independent bookstore with a big dream: to foster a community of readers and support local authors. We are more than just a place to buy books; we are a hub for literary events, book clubs, and workshops.</p>
+                <p>Our mission is to make reading accessible to everyone. We are committed to providing a welcoming atmosphere where you can discover your next favorite book. Thank you for being a part of our story.</p>
             </div>
         </section>
     </main>

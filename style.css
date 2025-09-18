@@ -377,3 +377,15 @@ footer .container {
 .notification.show {
     top: 20px; /* Slide into view */
 }
+
+.header-actions {
+    position: relative;
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
